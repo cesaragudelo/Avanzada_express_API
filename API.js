@@ -8,10 +8,11 @@ export class API {
         this.enrutarPeticiones()
     }
     levantarServidor(){
-        this.app.listen(this.levantarServidor.PORT,()=>console.log(`encendido en ${process.env.PORT}`)
-        )
+        this.app.listen(process.env.PORT,()=>console.log(`encendido en ${process.env.PORT}`))
+        //this.app.listen(this.levantarServidor.PORT,()=>console.log(`encendido en ${process.env.PORT}`))
     }
     enrutarPeticiones(){
+        this.app.use(express.json())
         this.app.use('/',rutas)
        
     }
