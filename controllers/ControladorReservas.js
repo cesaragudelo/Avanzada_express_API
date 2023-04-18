@@ -5,12 +5,12 @@ export class ControladorReservas{
             let datosReservacion=peticion.body
             console.log(datosReservacion)
             respuesta.status(200).json({
-                "mensaje":"exito agregando datos",
+                "mensaje":"exito agregando datos reserva",
             })
         }
         catch(error){
             respuesta.status(400).json({
-                "mensaje":"fallamos en la operacion"+error
+                "mensaje":"fallamos en la operacion agregar reserva"+error
             })
         }
     }
@@ -24,7 +24,7 @@ export class ControladorReservas{
         }
         catch(error){
             respuesta.status(400).json({
-                "mensaje":"fallamos buscando habitacion"+error
+                "mensaje":"fallamos buscando reservacion"+error
             })
         }
     }
@@ -64,12 +64,12 @@ export class ControladorReservas{
         console.log(datosReserva)
         try{
             respuesta.status(200).json({
-                "mensaje":"exito editando reservacion",
+                "mensaje":"exito eliminando reservacion",
             })
         }
         catch(error){
             respuesta.status(400).json({
-                "mensaje":"fallamos editando reservacion"+error
+                "mensaje":"fallamos eliminando reservacion"+error
             })
         }
     }
